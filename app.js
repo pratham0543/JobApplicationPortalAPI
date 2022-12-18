@@ -33,6 +33,6 @@ app.use("/candidate/apply",application);
 
 app.use((req,res)=>
 {
-    res.status(404).json({mes:"Source Not Found! Home route"})
+    res.status(200).json({mes:"Source Not Found! Home route"})
 })
 module.exports=app;
