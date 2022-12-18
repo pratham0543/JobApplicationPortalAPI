@@ -8,6 +8,7 @@ const compLogin=require('./api/routes/companyLogin');
 const canLogin=require('./api/routes/candidateLogin');
 const postJob=require("./api/routes/companyJobs")
 const application=require('./api/routes/jobApplications')
+
 const cors=require('cors');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
@@ -30,9 +31,8 @@ app.use("/company/postjob",postJob);
 
 app.use("/candidate/apply",application);
 
-
 app.use((req,res)=>
 {
-    res.status(404).json({mes:"Source Not Found!"})
+    res.status(404).json({mes:"Source Not Found! Home route"})
 })
 module.exports=app;
