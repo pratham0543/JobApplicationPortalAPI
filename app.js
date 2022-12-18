@@ -31,7 +31,7 @@ app.use("/company/postjob",postJob);
 
 app.use("/candidate/apply",application);
 
-app.use((req,res)=>
+app.use('/',(req,res)=>
 {
     res.status(200).json({mes:"Source Not Found! Home route"})
 })
